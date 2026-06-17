@@ -116,7 +116,7 @@ public:
 };
 By Optimal Approach (Dutch Flag Algorithm)
 Time complexity- O(n)
-Space complexity- O()
+Space complexity- O(1)
 //Code
 class Solution {
 public:
