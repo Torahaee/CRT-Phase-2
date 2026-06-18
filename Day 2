@@ -54,3 +54,25 @@ public:
         return {-1,-1};
     }
 };
+
+Problem Statement - Max sum subarray of size K (Geekofgeeks)
+//Code
+class Solution {
+  public:
+    int maxSubarraySum(vector<int>& arr, int k) {
+        // code here
+        int sum = 0;
+        
+        for(int i= 0; i<k; i++){
+            sum = sum + arr[i];
+        }
+        
+        int maxSum = sum;
+        
+        for(int i = k; i<arr.size(); i++){
+            sum = sum + arr[i]- arr[i-k];
+            maxSum = max(maxSum, sum);
+        }
+        return maxSum;
+    }
+};
