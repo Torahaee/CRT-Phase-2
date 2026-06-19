@@ -18,3 +18,5 @@ public:
         return ans;
     }
 };
+By optimal approach (Prefix and suffix product)
+//Code
