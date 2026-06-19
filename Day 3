@@ -41,3 +41,7 @@ public:
         return ans;
     }
 };
+
+Problem statement - Trapping Rainwater
+Using prefix-suffix and min-max
+//Code
