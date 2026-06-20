@@ -84,7 +84,7 @@ class Solution {
     }
 };
 
-Problem statement - Find Peak Elements
+Problem statement - Find Peak Elements (leetcode 162)
 //Code
 class Solution {
 public:
@@ -96,7 +96,7 @@ public:
             if((mid == 0 || arr[mid]>arr[mid-1]) && (mid == n-1 || arr[mid]>arr[mid+1]))
             return mid;
             if(mid>0 && arr[mid-1]>arr[mid]){
-                high=mid+1;
+                high=mid-1;
             }
             else{
                 low=mid+1;
