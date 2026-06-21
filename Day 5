@@ -35,4 +35,22 @@ public:
     }
 };
 
+Problem Statement - Middle of the linked list
+//Code
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+
+        while(fast != nullptr && fast->next != nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
+    }
+};
+
+Problem Statement - Linked List Cycle
+//Code
 
