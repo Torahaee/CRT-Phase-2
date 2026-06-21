@@ -51,6 +51,25 @@ public:
     }
 };
 
-Problem Statement - Linked List Cycle
+Problem Statement - Linked List Cycle (Leetcode 141)
 //Code
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        ListNode* slow = head;
+        ListNode* fast= head;
 
+        while(fast != nullptr && fast->nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
+
+            if(slow == fast){
+                return true;
+            }
+        }
+        return false;
+    }
+};
+
+Problem Staement - 
+//Code
