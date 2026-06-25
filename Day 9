@@ -13,6 +13,10 @@ public:
                 int first = st.top(); st.pop();
                 int second = st.top(); st.pop();
                 st.push(second * first);
+            } else if(c == "-"){
+                int first = st.top(); st.pop();
+                int second = st.top(); st.pop();
+                st.push(second - first);
             } else if(c == "/"){
                 int first = st.top(); st.pop();
                 int second = st.top(); st.pop();
