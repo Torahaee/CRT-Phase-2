@@ -31,3 +31,26 @@ public:
         return st.top();
     }
 };
+
+Problem Statement - Binary Tree Preorder Traversal (Leetcode 144)
+//Code
+class Solution {
+public:
+    void traversal(TreeNode* root, vector<int> &ans) {
+        if(root == nullptr){
+            return;
+        }
+        ans.push_back(root->val);
+        traversal(root->left, ans);
+        traversal(root->right, ans);        
+    }
+
+    vector<int> preorderTraversal(TreeNode* root){
+        vector<int> ans;
+        traversal(root, ans);
+        return ans;
+    }
+};
+
+Problem Statement - 
+//Code
