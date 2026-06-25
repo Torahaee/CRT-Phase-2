@@ -71,3 +71,27 @@ public:
         return ans;
     }
 };
+
+Porblem Statement - Binary Tree Postorder Traversal (Leetcode 145)
+//Code
+class Solution {
+public:
+    void traversal(TreeNode* root, vector<int> &ans) {
+        if(root == nullptr){
+            return;
+        }
+        traversal(root->left, ans);
+        traversal(root->right, ans);
+        ans.push_back(root->val);        
+    }
+
+    vector<int> postorderTraversal(TreeNode* root){
+        vector<int> ans;
+        traversal(root, ans);
+        return ans;
+    }
+};
+
+Problem Statement - Maximum Depth of Binary Tree (Leetcode 104)
+//Code
+
