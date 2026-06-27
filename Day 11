@@ -23,5 +23,21 @@ public:
     }
 };
 
-Problem Statement -
+Problem Statement - Path Sum (Leetcode 112)
 //Code
+class Solution {
+public:
+    bool hasPathSum(TreeNode* root, int targetSum) {
+         //base condition
+         if(root == nullptr){
+            return false;
+         }
+         if(root->left == nullptr && root->right == nullptr){
+            return targetSum - root->val == 0;
+         }
+
+         //logic
+         targetSum = targetSum - root->val;
+         return hasPathSum(root->left, targetSum) || hasPathSum(root->right, targetSum);
+  }
+};
